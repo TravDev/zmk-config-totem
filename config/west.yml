@@ -1,7 +1,7 @@
 manifest:
   remotes:
-    - name: travdev
-      url-base: https://github.com/TravDev/zmk-config-totem
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
   projects:
     - name: zmk
       remote: zmkfirmware
