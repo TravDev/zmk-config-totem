@@ -74,6 +74,11 @@
             bindings = <&kp END>;
             key-positions = <13 18>;
         };
+
+        cmb_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <32 25>;
+        };
     };
 
     macros {
