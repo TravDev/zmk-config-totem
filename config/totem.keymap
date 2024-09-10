@@ -123,9 +123,9 @@
         Nav {
             label = "Nav";
             bindings = <
-              &kp GRAVE       &kp MINUS  &kp UP_ARROW  &kp PLUS              &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+              &kp GRAVE       &kp HOME   &kp UP_ARROW  &kp END               &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
               &kp LEFT_SHIFT  &kp LEFT   &kp DOWN      &hm LEFT_SHIFT RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&kp LEFT_ALT  &kp LEFT_WIN    &kp HOME   &none         &kp END               &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp EQUAL
+&kp LEFT_ALT  &kp LEFT_WIN    &kp MINUS  &none         &kp PLUS              &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp EQUAL
                                          &trans        &trans                &trans      &trans    &trans        &kp DOT
             >;
         };
