@@ -54,7 +54,7 @@
         snake_case: snake_case {
             compatible = "zmk,behavior-mod-morph";
             label = "SNAKE_CASE";
-            bindings = <&lt 2 SPACE>, <&kp UNDERSCORE>;
+            bindings = <&lt 4 SPACE>, <&kp UNDERSCORE>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
@@ -73,6 +73,7 @@
         cmb_end {
             bindings = <&kp END>;
             key-positions = <13 18>;
+            layers = <0>;
         };
 
         cmb_enter {
@@ -83,11 +84,25 @@
         cmb_down {
             bindings = <&kp DOWN>;
             key-positions = <13 17>;
+            layers = <0>;
         };
 
         cmb_up {
             bindings = <&kp UP_ARROW>;
             key-positions = <13 7>;
+            layers = <0>;
+        };
+
+        cmb_mac_sol {
+            bindings = <&mac_sol>;
+            key-positions = <13 16>;
+            layers = <1>;
+        };
+
+        cmb_mac_eol {
+            bindings = <&mac_eol>;
+            key-positions = <13 18>;
+            layers = <1>;
         };
     };
 
@@ -143,8 +158,18 @@
             bindings = <
               &kp Q           &kp W       &kp E          &kp R            &kp T      &kp Y      &kp U        &kp I        &kp O       &kp P
               &hm LEFT_GUI A  &hm LALT S  &hm LCTRL D    &hm LSHIFT F     &kp G      &kp H      &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMICOLON
-&lt 3 ESCAPE  &kp Z           &kp X       &kp C          &kp V            &kp B      &kp N      &kp M        &kp COMMA    &kp DOT     &kp SLASH           &kp APOSTROPHE
-                                          &mt LCTRL DEL  &lt 1 BACKSPACE  &kp TAB    &kp ENTER  &snake_case  &kp MINUS
+&lt 5 ESCAPE  &kp Z           &kp X       &kp C          &kp V            &kp B      &kp N      &kp M        &kp COMMA    &kp DOT     &kp SLASH           &kp APOSTROPHE
+                                          &mt LCTRL DEL  &lt 2 BACKSPACE  &kp TAB    &kp ENTER  &snake_case  &kp MINUS
+            >;
+        };
+
+        base_mac {
+            label = "Base_mac";
+            bindings = <
+              &kp Q           &kp W       &kp E             &kp R            &kp T      &kp Y      &kp U        &kp I        &kp O       &kp P
+              &hm LEFT_GUI A  &hm LALT S  &hm LCTRL D       &hm LSHIFT F     &kp G      &kp H      &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMICOLON
+&lt 5 ESCAPE  &kp Z           &kp X       &kp C             &kp V            &kp B      &kp N      &kp M        &kp COMMA    &kp DOT     &kp SLASH           &kp APOSTROPHE
+                                          &mt LEFT_GUI DEL  &lt 3 BACKSPACE  &kp TAB    &kp ENTER  &snake_case  &kp MINUS
             >;
         };
 
@@ -152,6 +177,16 @@
             label = "Nav";
             bindings = <
               &kp GRAVE       &kp HOME   &kp UP_ARROW  &kp END               &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+              &kp LEFT_SHIFT  &kp LEFT   &kp DOWN      &hm LEFT_SHIFT RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
+&kp LEFT_ALT  &kp LEFT_WIN    &kp PG_UP  &none         &kp PAGE_DOWN         &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp EQUAL
+                                         &trans        &trans                &trans      &trans    &kp PLUS      &kp DOT
+            >;
+        };
+
+        nav_mac {
+            label = "nav_mac";
+            bindings = <
+              &kp GRAVE       &mac_sol   &kp UP_ARROW  &mac_eol              &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
               &kp LEFT_SHIFT  &kp LEFT   &kp DOWN      &hm LEFT_SHIFT RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
 &kp LEFT_ALT  &kp LEFT_WIN    &kp PG_UP  &none         &kp PAGE_DOWN         &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp EQUAL
                                          &trans        &trans                &trans      &trans    &kp PLUS      &kp DOT
@@ -171,8 +206,8 @@
         Fun {
             label = "Fun";
             bindings = <
-        &none  &none     &none          &none   &to 4     &trans  &trans  &trans  &kp END  &kp F1
-        &none  &sql_ssf  &sql_distinct  &none   &to 6     &trans  &trans  &trans  &trans   &kp F10
+        &none  &none     &none          &none   &to 6     &trans  &trans  &trans  &kp END  &kp F1
+        &none  &sql_ssf  &sql_distinct  &none   &to 1     &trans  &trans  &trans  &trans   &kp F10
 &trans  &none  &none     &none          &none   &none     &trans  &trans  &trans  &trans   &kp F20  &kp F7
                          &trans         &trans  &trans    &trans  &trans  &trans
             >;
@@ -180,7 +215,7 @@
 
         Gaming {
             bindings = <
-            &kp Z           &kp X  &kp C      &kp V         &sl 5     &trans  &trans  &trans  &trans  &trans
+            &kp Z           &kp X  &kp C      &kp V         &sl 7     &trans  &trans  &trans  &trans  &trans
             &kp TAB         &kp Q  &kp W      &kp E         &kp R     &trans  &trans  &trans  &trans  &trans
 &kp ESCAPE  &kp LEFT_SHIFT  &kp A  &kp S      &kp D         &kp F     &trans  &trans  &trans  &trans  &trans  &trans
                                    &kp LCTRL  &kp LEFT_ALT  &trans    &trans  &trans  &trans
@@ -198,26 +233,6 @@
             >;
 
             label = "Gaming+";
-        };
-
-        base_mac {
-            label = "Base_mac";
-            bindings = <
-              &kp Q           &kp W       &kp E             &kp R            &kp T      &kp Y      &kp U        &kp I        &kp O       &kp P
-              &hm LEFT_GUI A  &hm LALT S  &hm LCTRL D       &hm LSHIFT F     &kp G      &kp H      &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMICOLON
-&lt 3 ESCAPE  &kp Z           &kp X       &kp C             &kp V            &kp B      &kp N      &kp M        &kp COMMA    &kp DOT     &kp SLASH           &kp APOSTROPHE
-                                          &mt LEFT_GUI DEL  &lt 7 BACKSPACE  &kp TAB    &kp ENTER  &snake_case  &kp MINUS
-            >;
-        };
-
-        nav_mac {
-            label = "nav_mac";
-            bindings = <
-              &kp GRAVE       &mac_sol   &kp UP_ARROW  &mac_eol              &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-              &kp LEFT_SHIFT  &kp LEFT   &kp DOWN      &hm LEFT_SHIFT RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&kp LEFT_ALT  &kp LEFT_WIN    &kp PG_UP  &none         &kp PAGE_DOWN         &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp EQUAL
-                                         &trans        &trans                &trans      &trans    &kp PLUS      &kp DOT
-            >;
         };
     };
 };
