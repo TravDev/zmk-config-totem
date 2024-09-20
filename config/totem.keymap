@@ -67,18 +67,19 @@
         cmb_home {
             bindings = <&kp HOME>;
             key-positions = <13 16>;
-            layers = <0>;
+            layers = <0 2>;
         };
 
         cmb_end {
             bindings = <&kp END>;
             key-positions = <13 18>;
-            layers = <0>;
+            layers = <0 2>;
         };
 
         cmb_enter {
             bindings = <&kp ENTER>;
-            key-positions = <32 25>;
+            key-positions = <25 33>;
+            layers = <0 2>;
         };
 
         cmb_down {
@@ -148,6 +149,34 @@
 
             label = "MAC_SOL";
         };
+
+        win_dsktp_right: win_dsktp_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI &kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LEFT_GUI &kp LEFT_CONTROL>;
+
+            label = "WIN_DSKTP_RIGHT";
+        };
+
+        win_dsktp_left: win_dsktp_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI &kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp LEFT_ARROW>,
+                <&macro_release>,
+                <&kp LEFT_GUI &kp LEFT_CONTROL>;
+
+            label = "WIN_DSKTP_LEFT";
+        };
     };
 
     keymap {
@@ -206,10 +235,10 @@
         Fun {
             label = "Fun";
             bindings = <
-        &none  &none     &none          &none   &to 6     &trans  &trans  &trans  &kp END  &kp F1
-        &none  &sql_ssf  &sql_distinct  &none   &to 1     &trans  &trans  &trans  &trans   &kp F10
-&trans  &none  &none     &none          &none   &to 0     &trans  &trans  &trans  &trans   &kp F20  &kp F7
-                         &trans         &trans  &trans    &trans  &trans  &trans
+        &none  &none     &none          &none   &to 6     &trans  &trans           &trans  &kp END           &kp F1
+        &none  &sql_ssf  &sql_distinct  &none   &to 1     &trans  &win_dsktp_left  &trans  &win_dsktp_right  &kp F10
+&trans  &none  &none     &none          &none   &to 0     &trans  &trans           &trans  &trans            &kp F20  &kp F7
+                         &trans         &trans  &trans    &trans  &trans           &trans
             >;
         };
 
