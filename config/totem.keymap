@@ -59,6 +59,24 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
         };
+
+        Ctrl_v_PgDown: Ctrl_v_PgDown {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_V_PGDOWN";
+            bindings = <&kp PG_DN>, <&kp V>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        Ctrl_c_PgUp: Ctrl_c_PgUp {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_C_PGUP";
+            bindings = <&kp PG_UP>, <&kp C>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
     };
 
     combos {
@@ -205,10 +223,10 @@
         Nav {
             label = "Nav";
             bindings = <
-           &kp GRAVE       &kp HOME   &kp UP_ARROW    &kp END        &kp LBRC    &kp RBRC  &kp NUMBER_7              &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-           &kp LEFT_ALT    &kp LEFT   &kp DOWN_ARROW  &kp RIGHT      &kp LBKT    &kp RBKT  &hm RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&kp LCTRL  &kp LEFT_SHIFT  &kp PG_UP  &kp C           &kp PAGE_DOWN  &kp LPAR    &kp RPAR  &kp NUMBER_1              &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp EQUAL
-                                      &trans          &trans         &trans      &trans    &kp PLUS                  &kp DOT
+           &kp GRAVE       &kp HOME   &kp UP_ARROW    &kp END         &kp LBRC    &kp RBRC  &kp NUMBER_7              &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+           &kp LEFT_ALT    &kp LEFT   &kp DOWN_ARROW  &kp RIGHT       &kp LBKT    &kp RBKT  &hm RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
+&kp LCTRL  &kp LEFT_SHIFT  &kp PG_UP  &Ctrl_c_PgUp    &Ctrl_v_PgDown  &kp LPAR    &kp RPAR  &kp NUMBER_1              &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp EQUAL
+                                      &trans          &trans          &trans      &trans    &kp PLUS                  &kp DOT
             >;
         };
 
