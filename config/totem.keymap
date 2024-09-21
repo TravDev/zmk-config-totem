@@ -78,7 +78,7 @@
 
         cmb_enter {
             bindings = <&kp ENTER>;
-            key-positions = <25>;
+            key-positions = <25 32>;
             layers = <0 2>;
         };
 
