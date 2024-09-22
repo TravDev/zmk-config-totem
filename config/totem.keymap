@@ -95,6 +95,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
         };
+
+        dsktp_switch_left: dsktp_switch_left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DSKTP_SWITCH_LEFT";
+            bindings = <&win_dsktp_left>, <&mac_dsktp_left>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
+
+        dsktp_switch_right: dsktp_switch_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DSKTP_SWITCH_RIGHT";
+            bindings = <&win_dsktp_right>, <&mac_dsktp_right>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
     };
 
     combos {
@@ -289,10 +307,10 @@
         Sym {
             label = "Sym";
             bindings = <
-        &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND    &kp KP_ASTERISK  &kp SQT           &kp DQT
-        &trans    &trans  &trans    &trans      &trans         &trans     &win_dsktp_left  &trans           &win_dsktp_right  &trans
-&trans  &trans    &trans  &trans    &trans      &trans         &kp UNDER  &kp EQUAL        &trans           &trans            &kp SLASH  &kp HOME
-                          &trans    &trans      &trans         &trans     &trans           &trans
+        &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND       &kp KP_ASTERISK  &kp SQT              &kp DQT
+        &trans    &trans  &trans    &trans      &trans         &trans     &dsktp_switch_left  &trans           &dsktp_switch_right  &trans
+&trans  &trans    &trans  &trans    &trans      &trans         &kp UNDER  &kp EQUAL           &trans           &trans               &kp SLASH  &kp HOME
+                          &trans    &trans      &trans         &trans     &trans              &trans
             >;
         };
 
