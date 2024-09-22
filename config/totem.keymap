@@ -136,7 +136,7 @@
 
         cmb_enter {
             bindings = <&kp ENTER>;
-            key-positions = <25 34>;
+            key-positions = <25 33>;
         };
 
         cmb_down {
@@ -159,6 +159,11 @@
             bindings = <&mac_eol>;
             key-positions = <13 18>;
             layers = <1 3>;
+        };
+
+        cmd_enter_2 {
+            bindings = <&kp ENTER>;
+            key-positions = <25 34>;
         };
     };
 
