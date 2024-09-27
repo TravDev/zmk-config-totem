@@ -315,7 +315,7 @@
             bindings = <
         &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND       &kp KP_ASTERISK  &kp SQT              &kp DQT
         &trans    &trans  &trans    &trans      &trans         &trans     &dsktp_switch_left  &trans           &dsktp_switch_right  &trans
-&trans  &trans    &trans  &trans    &trans      &trans         &kp UNDER  &kp EQUAL           &trans           &trans               &kp SLASH  &kp HOME
+&trans  &trans    &trans  &trans    &trans      &trans         &kp UNDER  &trans              &trans           &trans               &kp SLASH  &kp EQUAL
                           &trans    &trans      &trans         &trans     &trans              &trans
             >;
         };
