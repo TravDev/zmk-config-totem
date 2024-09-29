@@ -60,10 +60,10 @@
             mods = <(MOD_RSFT)>;
         };
 
-        Ctrl_v_PgDown: Ctrl_v_PgDown {
+        Ctrl_v_PgUp: Ctrl_v_PgUp {
             compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_V_PGDOWN";
-            bindings = <&kp PG_DN>, <&kp V>;
+            label = "CTRL_V_PGUP";
+            bindings = <&kp PG_UP>, <&kp V>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -80,10 +80,10 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
-        cmd_V_PgDown: cmd_V_PgDown {
+        cmd_V_PgUp: cmd_V_PgUp {
             compatible = "zmk,behavior-mod-morph";
-            label = "CMD_V_PGDOWN";
-            bindings = <&kp PG_DN>, <&kp V>;
+            label = "CMD_V_PGUP";
+            bindings = <&kp PG_UP>, <&kp V>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
@@ -293,10 +293,10 @@
         Nav {
             label = "Nav";
             bindings = <
-              &kp GRAVE         &kp HOME   &kp UP_ARROW    &kp END         &kp LBRC    &kp RBRC  &kp NUMBER_7              &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-              &kp LEFT_CONTROL  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT       &kp LBKT    &kp RBKT  &hm RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&kp LEFT_ALT  &kp LEFT_SHIFT    &kp PG_UP  &Ctrl_c         &Ctrl_v_PgDown  &kp LPAR    &kp RPAR  &kp NUMBER_1              &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp EQUAL
-                                           &trans          &trans          &trans      &trans    &kp PLUS                  &kp DOT
+              &kp GRAVE         &kp HOME       &kp UP_ARROW    &kp END       &kp LBRC    &kp RBRC  &kp NUMBER_7              &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+              &kp LEFT_CONTROL  &kp LEFT       &kp DOWN_ARROW  &kp RIGHT     &kp LBKT    &kp RBKT  &hm RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
+&kp LEFT_ALT  &kp LEFT_SHIFT    &kp PAGE_DOWN  &Ctrl_c         &Ctrl_v_PgUp  &kp LPAR    &kp RPAR  &kp NUMBER_1              &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp EQUAL
+                                               &trans          &trans        &trans      &trans    &kp PLUS                  &kp DOT
             >;
         };
 
@@ -305,7 +305,7 @@
             bindings = <
               &kp GRAVE       &mac_sol   &kp UP_ARROW  &mac_eol              &kp LBRC    &kp RBRC  &kp NUMBER_7             &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
               &kp LEFT_GUI    &kp LEFT   &kp DOWN      &hm LEFT_SHIFT RIGHT  &kp LBKT    &kp RBKT  &hm LEFT_SHIFT NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
-&kp LEFT_ALT  &kp LEFT_SHIFT  &kp PG_UP  &cmd_c        &cmd_V_PgDown         &kp LPAR    &kp RPAR  &kp NUMBER_1             &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp EQUAL
+&kp LEFT_ALT  &kp LEFT_SHIFT  &kp PG_UP  &cmd_c        &cmd_V_PgUp           &kp LPAR    &kp RPAR  &kp NUMBER_1             &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp EQUAL
                                          &trans        &trans                &trans      &trans    &kp PLUS                 &kp DOT
             >;
         };
