@@ -303,10 +303,10 @@
         nav_mac {
             label = "nav_mac";
             bindings = <
-              &kp GRAVE       &mac_sol   &kp UP_ARROW  &mac_eol              &kp LBRC    &kp RBRC  &kp NUMBER_7             &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-              &kp LEFT_GUI    &kp LEFT   &kp DOWN      &hm LEFT_SHIFT RIGHT  &kp LBKT    &kp RBKT  &hm LEFT_SHIFT NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
-&kp LEFT_ALT  &kp LEFT_SHIFT  &kp PG_UP  &cmd_c        &cmd_V_PgUp           &kp LPAR    &kp RPAR  &kp NUMBER_1             &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp EQUAL
-                                         &trans        &trans                &trans      &trans    &kp PLUS                 &kp DOT
+              &kp GRAVE       &mac_sol       &kp UP_ARROW  &mac_eol              &kp LBRC    &kp RBRC  &kp NUMBER_7             &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+              &kp LEFT_GUI    &kp LEFT       &kp DOWN      &hm LEFT_SHIFT RIGHT  &kp LBKT    &kp RBKT  &hm LEFT_SHIFT NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
+&kp LEFT_ALT  &kp LEFT_SHIFT  &kp PAGE_DOWN  &cmd_c        &cmd_V_PgUp           &kp LPAR    &kp RPAR  &kp NUMBER_1             &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp EQUAL
+                                             &trans        &trans                &trans      &trans    &kp PLUS                 &kp DOT
             >;
         };
 
