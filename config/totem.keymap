@@ -151,7 +151,7 @@
 
         cmb_mac_sol {
             bindings = <&mac_sol>;
-            key-positions = <13 16 2>;
+            key-positions = <13 16>;
             layers = <1 3>;
         };
 
@@ -189,7 +189,7 @@
                 <&macro_press>,
                 <&kp LEFT_GUI>,
                 <&macro_tap>,
-                <&kp RIGHT>,
+                <&kp RIGHT_ARROW>,
                 <&macro_release>,
                 <&kp LEFT_GUI>;
 
