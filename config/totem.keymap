@@ -151,7 +151,7 @@
 
         cmb_mac_sol {
             bindings = <&mac_sol>;
-            key-positions = <13 16>;
+            key-positions = <13 16 2>;
             layers = <1 3>;
         };
 
