@@ -6,6 +6,10 @@
 - [TOTEM](https://github.com/eigatech/zmk-config/tree/totem)
 - [TOTEM Dongle](https://github.com/eigatech/zmk-config/tree/totem-dongle)
 
+## ZMK
+
+- [Documentation](https://zmk.dev/docs)
+
 ## Dongle Flashing
 
 1. Turn all controllers off
