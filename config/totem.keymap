@@ -122,16 +122,6 @@
     combos {
         compatible = "zmk,combos";
 
-        cmb_home {
-            bindings = <&kp HOME>;
-            key-positions = <13 16>;
-        };
-
-        cmb_end {
-            bindings = <&kp END>;
-            key-positions = <13 18>;
-        };
-
         cmb_enter {
             bindings = <&kp ENTER>;
             key-positions = <25 33>;
