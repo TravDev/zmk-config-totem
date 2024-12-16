@@ -28,7 +28,7 @@
 https://docs.slicemk.com/firmware/zmk/wireless/dongle/
 
 The default setup currently does not have the &bt Profile functions mapped. 
-You welcome to map those functions into a Layer to allow the other devices to connect via Bluetooth to the dongle per notation [here](https://docs.slicemk.com/firmware/zmk/wireless/dongle/#dongle-setup).
+You are welcome to map those functions into a Layer to allow the other devices to connect via Bluetooth to the dongle per notation [here](https://docs.slicemk.com/firmware/zmk/wireless/dongle/#dongle-setup).
 
 
 ## ZMK Keymap Editor
